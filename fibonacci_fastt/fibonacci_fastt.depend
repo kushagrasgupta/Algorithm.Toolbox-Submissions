@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1599218094 source:e:\c++ codes\fibonacci_fastt\main.cpp
+	<iostream>
+	<cassert>
+
