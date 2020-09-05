@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1599321098 source:e:\c++ codes\fibonacci_partial_sum\main.cpp
+	<algorithm>
+	<iostream>
+
