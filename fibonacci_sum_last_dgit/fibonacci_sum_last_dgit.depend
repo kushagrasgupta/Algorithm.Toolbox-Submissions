@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1599255549 source:e:\c++ codes\fibonacci_sum_last_dgit\main.cpp
+	<iostream>
+	<vector>
+
