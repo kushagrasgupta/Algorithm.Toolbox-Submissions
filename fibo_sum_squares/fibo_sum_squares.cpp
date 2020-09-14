@@ -1,25 +1,31 @@
+#include <algorithm>
 #include <iostream>
+using namespace std;
 
-int fibonacci_sum_squares_naive(long long n) {
-    if (n <= 1)
-        return n;
-
-    long long previous = 0;
-    long long current  = 1;
-    long long sum      = 1;
-
-    for (long long i = 0; i < n - 1; ++i) {
-        long long tmp_previous = previous;
-        previous = current;
-        current = tmp_previous + current;
-        sum += current * current;
+typedef long long int ll;
+ll fibo_sum_last_digit( ll n) {
+    if (n == 0)
+		return 0;
+	if (n == 1)
+		return 1;
+	else {
+    n=(n)%60;
+    if(n==0) return 0;
+    ll f[60]={0};
+    f[0]=0;
+    f[1]=1;
+    for(ll i=2;i<=n;i++)
+    {
+        f[i]=(f[i-1] + f[i-2])%10;
     }
-
-    return sum % 10;
+    return (f[n]%10) ;
+  }
 }
-
 int main() {
-    long long n = 0;
-    std::cin >> n;
-    std::cout << fibonacci_sum_squares_naive(n);
-}
+    ll n;
+    cin >> n;
+    ll c = (fibo_sum_last_digit(n)+10)%10;
+    ll d = (fibo_sum_last_digit(n+1)+10)%10;
+    cout << (c*d)%10 << '\n';
+    return 0;
+    }
